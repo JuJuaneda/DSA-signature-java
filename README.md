@@ -20,6 +20,6 @@ This program can be used with four different options :
   
   -v or --verif <data r s publicKey> verifies that the given signature is valid for the given data and public key.
   
-  -t or --time <data> returns the time needed to do 10000 signatures and the time needed to do 10000 verifications for the given data or SylvainDuquesne if no data given.
+  -t or --time <data> returns the time needed to do 10000 signatures and the time needed to do 10000 verifications for the given data or SylvainDuquesne if no data was given.
   
   -h or --help opens helper  

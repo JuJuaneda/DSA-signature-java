@@ -21,7 +21,6 @@ public class optionParser {
     
     Option verif = Option.builder("v").longOpt("verif")
                          .numberOfArgs(4)
-                         .valueSeparator(',')
                          .desc("verifies the given signature").build();    
     options.addOption(verif);
     

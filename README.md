@@ -26,3 +26,19 @@ This program can be used with four different options :
                         "SylvainDuquesne" if no data was given. Time is returned as nanoseconds.
   
     -h or --help opens helper  
+
+
+Detailed Workings
+-----------------
+
+In the root folder are two packages:
+
+org.apache.commons.cli which is a package from the Apache API used for the parsing of the command line. For more informations about this package got to https://commons.apache.org/proper/commons-cli/
+
+DSAmain is the main package of this program, it contains the following classes :
+
+DSA is the main class of the program, it contains the main method that runs the program.
+
+optionParser is a class that only contains a building method that parses the command line and returns an optionParser object that contains the values of the different arguments given as inputs.
+
+executionTime is also a class that only contains a building method. This building method creates an execution Time object that is made of the time needed for <int> signature and the Time needed for <int> verification of <data> were <int> and <data> are the inputs given to this method.

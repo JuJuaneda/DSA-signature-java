@@ -41,4 +41,26 @@ DSA is the main class of the program, it contains the main method that runs the 
 
 optionParser is a class that only contains a building method that parses the command line and returns an optionParser object that contains the values of the different arguments given as inputs.
 
-executionTime is also a class that only contains a building method. This building method creates an execution Time object that is made of the time needed for <int> signature and the Time needed for <int> verification of <data> were <int> and <data> are the inputs given to this method.
+executionTime is also a class that only contains a building method. This building method creates an executionTime object that is made of the time needed for _int_ signature and the Time needed for _int_ verification of _data_ where _int_ and _data_ are the inputs given to this method.
+
+The signature class has three BigInteger constants L = 2^160 + 7, P = 1 + (2^160 + 7)(2^864 + 218) and G = 2^((P-1)/L) mod P. A signature object has four parameters which are all BigInteger objects:  
+  
+  * data which contains the hashed data to be signed
+
+  * r which contains the r value of the signature.
+
+  * s whcih contains the s value of the signature.
+
+  * publicKey which contains the public key associated with the private key used to generate the signature.
+
+To build a signature object there are two options:
+
+  * The first builder only takes an argument byte[] data. The given data is then hashed using MD5 (I chose to use MD5 because I worked on a project about that hash function and also because the goal of this implementation is only 80 bits of security using a more secured hash is not necessary) and the resulting hash is then stored as a BigInteger in the data parameter of the newly created signature object. Next, a key pair and a random value k are generated, the public key is stored in the publicKey argument, the private key and value k are used along with the previously defined constants to compute values r and s. Finally the method makes sure that neither r nor s is equal to zero.
+
+  * The second builder takes four arguments data (a byte[] object) r s and publicKey (BigInteger objects) and returns a signature object with the MD5 hash of data and the given r s and publicKey as parameters. (This builder is only used to create a signature object to be verified for the verif option thus it doesn't check that neither r nor s are equal to zero as the following verif() method already does that).
+
+Finally a signature object has a method verif() which verifies if the signature object it is applied to is valid or not. To do so it first checks that values r and s are strictly comprised between 0 and L. Then it computes value r using s,publicKey,P,L and G and checks if the computed value is indeed equal to r.
+
+Example
+-------
+

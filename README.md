@@ -23,6 +23,6 @@ This program can be used with four different options :
                                        Arguments r,s and publicKey must be given as hexadecimals.
   
     -t or --time <data> returns the time needed to do 10000 signatures and the time needed to do 10000 verifications of data. 
-                        "SylvainDuquesne" if no data was given.
+                        "SylvainDuquesne" if no data was given. Time is returned as nanoseconds.
   
     -h or --help opens helper  

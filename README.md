@@ -33,7 +33,7 @@ Detailed Workings
 
 In the root folder are two packages:
 
-org.apache.commons.cli which is a package from the Apache API used for the parsing of the command line. For more informations about this package got to https://commons.apache.org/proper/commons-cli/
+org.apache.commons.cli which is a package from the Apache API used for the parsing of the command line. For more informations about this package go to https://commons.apache.org/proper/commons-cli/
 
 DSAmain is the main package of this program, it contains the following classes :
 

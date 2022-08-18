@@ -65,3 +65,5 @@ Example
 -------
 
 <p><img alt="Image" title="Example" src="ExampleDSA.png" /></p>
+
+This example was done using an Ubuntu 20.04.4 with an Intel core i7 processor with 8 CPUs and a 15 GiB RAM.

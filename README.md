@@ -64,3 +64,4 @@ Finally a signature object has a method verif() which verifies if the signature 
 Example
 -------
 
+<p><img alt="Image" title="Example" src="ExampleDSA.png" /></p>

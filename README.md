@@ -27,6 +27,8 @@ This program can be used with four different options :
   
     -h or --help opens helper  
 
+**Warning** : Use only one option at a time.
+
 
 Detailed Workings
 -----------------
